@@ -10,32 +10,24 @@
         target.style.backgroundColor ='black';
         target.style.color='white';
         self.value='day';
-        
-        /* querySelectorAll을 사용하여 'a' 태그를 'alist' 변수에 저장
-            반복문을 사용하여, 'a' 태그의 스타일 컬러를 'powderblue'로 지정
-        */
         var alist = document.querySelectorAll('a');
         var i = 0;
         while (i < alist.length) {
             alist[i].style.color = 'powderblue';
             i = i + 1;
         }
-        }
+      }
         else {
         target.style.backgroundColor ='white';
         target.style.color='black';
         self.value='night';
-
-        /* querySelectorAll을 사용하여 'a' 태그를 'alist' 변수에 저장
-            반복문을 사용하여, 'a' 태그의 스타일 컬러를 'blue'로 지정
-        */
         var alist = document.querySelectorAll('a');
         var i = 0;
         while (i < alist.length) {
             alist[i].style.color = 'blue';
             i = i + 1;
         }
-        }
+      }
     }
     
 </script>
