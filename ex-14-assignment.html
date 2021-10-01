@@ -1,0 +1,65 @@
+<!doctype html>
+<html>
+<head>
+  <title>WEB1 - JavaScript</title>
+  <meta charset="utf-8">
+  <script>
+    
+    // LinksSetColor() 함수를 Links라는 객체의 setColor() 메소드로 재정의하세요.
+    var Links = {
+        setColor:function(color) {
+            var alist = document.querySelectorAll('a');
+            var i = 0;
+            while (i < alist.length) {
+                alist[i].style.color = color;
+                i = i + 1;            
+            }
+        }
+    }
+
+    /* BodySetColor() 함수와 BodySetBackground() 함수를 Body라는 객체의
+        setColor() 매소드와 setBackgroundColor() 메소드로 재정의하세요.
+    */ 
+    var Body = {
+        setColor:function (color){
+            document.querySelector('body').style.color=color;
+        },
+
+        setBackgroundColor:function (color) {
+            document.querySelector('body').style.backgroundColor=color;
+        }
+    }
+
+    // 재정의된 객체와 메소드를 기반으로 nightDayHandler() 함수의 코딩을 수정하세요.
+    function nightDayHandler(self) {
+        if(self.value==='night') {
+        Body.setBackgroundColor('black');
+        Body.setColor('white');
+        self.value='day';
+        Links.setColor('powderblue');
+        }
+        else {
+        Body.setBackgroundColor('white');
+        Body.setColor('black');
+        self.value='night';
+        Links.setColor('blue');
+        }
+    }
+
+  </script>
+</head>
+<body>
+  <h1><a href="index.html">WEB</a></h1>
+  <input type="button" value="night" onclick="nightDayHandler(this);">
+
+  <ol>
+    <li><a href="01-html.html">HTML</a></li>
+    <li><a href="02-css.html">CSS</a></li>
+    <li><a href="03-javascript.html">JavaScript</a></li>
+  </ol>
+  <h2>JavaScript</h2>
+  <p>
+    JavaScript (/ˈdʒɑːvəˌskrɪpt/[6]), often abbreviated as JS, is a high-level, dynamic, weakly typed, prototype-based, multi-paradigm, and interpreted programming language. Alongside HTML and CSS, JavaScript is one of the three core technologies of World Wide Web content production. It is used to make webpages interactive and provide online programs, including video games. The majority of websites employ it, and all modern web browsers support it without the need for plug-ins by means of a built-in JavaScript engine. Each of the many JavaScript engines represent a different implementation of JavaScript, all based on the ECMAScript specification, with some engines not supporting the spec fully, and with many engines supporting additional features beyond ECMA.
+  </p>
+</body>
+</html>
